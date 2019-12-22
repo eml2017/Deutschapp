@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="festBlack">#000000</color>
+    <color name="festRed">#E12416</color>
+    <color name="festYellow">#FDE114</color>
+    <color name="festWhite">#FFFFFF</color>
+</resources>

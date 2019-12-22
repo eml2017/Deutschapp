@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/festDatesTextView"
+        android:text="September 17-20, 2020"
+        android:textColor="@color/festBlack"
+        android:gravity="bottom"
+        android:textSize="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_rowWeight=".5"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="1" />
+
+    <Button
+        android:id="@+id/executiveLogInButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="Executive Log-In"
+        android:layout_rowWeight=".5"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="1"
+        android:textSize="20dp"
+        android:background="@color/festYellow" />
+
+    <ImageView
+        android:id="@+id/crestImageView"
+        android:src="@drawable/fest_crest"
+        android:gravity="bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="3.5"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="2" />
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:text="Welcome to Deutschapp!"
+        android:textAlignment="center"
+        android:textColor="@color/festBlack"
+        android:gravity="bottom"
+        android:textSize="40dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_rowWeight="1.25"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="2" />
+
+    <Button
+        android:id="@+id/thursdayButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="Thursday"
+        android:layout_rowWeight=".5"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="1"
+        android:textSize="15dp"
+        android:textColor="@color/festWhite"
+        android:background="@color/festRed" />
+
+    <Button
+        android:id="@+id/fridayButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="Friday"
+        android:layout_rowWeight=".5"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="1"
+        android:textSize="15dp"
+        android:textColor="@color/festWhite"
+        android:background="@color/festRed" />
+
+    <Button
+        android:id="@+id/saturdayButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="Saturday"
+        android:layout_rowWeight=".5"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="1"
+        android:textSize="15dp"
+        android:textColor="@color/festWhite"
+        android:background="@color/festRed" />
+
+    <Button
+        android:id="@+id/sundayButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="Sunday"
+        android:layout_rowWeight=".5"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="1"
+        android:textSize="15dp"
+        android:textColor="@color/festWhite"
+        android:background="@color/festRed" />
+
+    <Button
+        android:id="@+id/mapButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="Map"
+        android:layout_rowWeight=".5"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="1"
+        android:textSize="20dp"
+        android:background="@color/festYellow" />
+
+    <Button
+        android:id="@+id/directoryButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="Directory"
+        android:layout_rowWeight=".5"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="1"
+        android:textSize="20dp"
+        android:background="@color/festYellow" />
+
+
+</GridLayout>
