@@ -33,10 +33,8 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, SundayActivity.class);
             startActivity(intent);
         } else if (button_text.equals("Map")) {
-            Toast toast = Toast.makeText(MainActivity.this, "TODO: Create a map activity", Toast.LENGTH_LONG);
-            toast.show();
-            //Intent intent = new Intent(this, MapActivity.class);
-            //startActivity(intent);
+            Intent intent = new Intent(this, MapActivity.class);
+            startActivity(intent);
         } else if (button_text.equals("Directory")) {
             Intent intent = new Intent(this, DirectoryActivity.class);
             startActivity(intent);

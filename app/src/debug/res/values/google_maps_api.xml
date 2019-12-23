@@ -1,0 +1,4 @@
+<resources>
+    <!-- https://console.developers.google.com/apis/credentials?project=deutschmap -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDCWRL6-XjRBedF4Zww-1oQsEEl6RprtnA </string>
+</resources>
