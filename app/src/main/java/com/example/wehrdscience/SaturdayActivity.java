@@ -41,7 +41,7 @@ public class SaturdayActivity extends AppCompatActivity {
         saturdayEventList.add(new Event("Biergarten Opens", "Biergarten", "11:00-1:00 AM (after parade)"));
         saturdayEventList.add(new Event("Rocky Coulee Brewing Opens", "Rocky Coulee Brewing Co.", "11:00 AM (after parade)"));
         saturdayEventList.add(new Event("Kid Zone", "City Park", "12:00-6:00 PM"));
-        saturdayEventList.add(new Event("Historisches Museum Open", "West 4th Ave. & Elm St.", "12:00-6:00 PM"));
+        saturdayEventList.add(new Event("Historical Museum Open", "West 4th Ave. & Elm St.", "12:00-6:00 PM"));
         saturdayEventList.add(new Event("Ag Machinery Display", "Historisches Museum", "12:00-6:00 PM"));
         saturdayEventList.add(new Event("Vintage Textile Display", "St. Matthew's Church (Alder St & 4th Ave)", "12:00-5:00 PM"));
         saturdayEventList.add(new Event("Poker Run Tournament 2-Person Scramble", "Odessa Golf & RV", "1:00 PM"));

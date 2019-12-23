@@ -74,7 +74,81 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         return false;
     }
 
-    public void buildMap(GoogleMap googleMap) {
+    public void buildMap() {
+        MarkerOptions chalkDrawingOpts = new MarkerOptions();
+        chalkDrawingOpts.position(new LatLng(47.333058, -118.689480));
+        chalkDrawingOpts.title("Chalk Drawing");
+        chalkDrawingOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(chalkDrawingOpts);
+
+        MarkerOptions tricycleRaceBedRacesParadeOpts = new MarkerOptions();
+        tricycleRaceBedRacesParadeOpts.position(new LatLng(47.333287, -118.691819));
+        tricycleRaceBedRacesParadeOpts.title("Tricycle Race, Bed Races, and Parade");
+        tricycleRaceBedRacesParadeOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(tricycleRaceBedRacesParadeOpts);
+
+        MarkerOptions biergartenOpts = new MarkerOptions();
+        biergartenOpts.position(new LatLng(47.333433, -118.689548));
+        biergartenOpts.title("Biergarten");
+        biergartenOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(biergartenOpts);
+
+        MarkerOptions chiefsOpts = new MarkerOptions();
+        chiefsOpts.position(new LatLng(  47.333358, -118.689933));
+        chiefsOpts.title("Chiefs Bar & Grill");
+        chiefsOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+        mGoogleMap.addMarker(chiefsOpts);
+
+        MarkerOptions bookSaleOpts = new MarkerOptions();
+        bookSaleOpts.position(new LatLng(47.333411, -118.691878));
+        bookSaleOpts.title("Book Sale");
+        bookSaleOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(bookSaleOpts);
+
+        MarkerOptions bakeSaleOpts = new MarkerOptions();
+        bakeSaleOpts.position(new LatLng(47.333515, -118.692506));
+        bakeSaleOpts.title("Old Town Hall German Bake Sale");
+        bakeSaleOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+        mGoogleMap.addMarker(bakeSaleOpts);
+
+        MarkerOptions stMatthewsChurchOpts = new MarkerOptions();
+        stMatthewsChurchOpts.position(new LatLng(47.330832, -118.692159));
+        stMatthewsChurchOpts.title("St. Matthew's Church");
+        stMatthewsChurchOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(stMatthewsChurchOpts);
+
+        MarkerOptions vendorFairOpts = new MarkerOptions();
+        vendorFairOpts.position(new LatLng(47.333655, -118.690482));
+        vendorFairOpts.title("Odessa High School FBLA Vendor Street Fair");
+        vendorFairOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(vendorFairOpts);
+
+        MarkerOptions rockyCouleeBreweryOpts = new MarkerOptions();
+        rockyCouleeBreweryOpts.position(new LatLng(47.335962, -118.689212));
+        rockyCouleeBreweryOpts.title("Rocky Coulee Brewery");
+        rockyCouleeBreweryOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(rockyCouleeBreweryOpts);
+
+        MarkerOptions historicalMuseumOpts = new MarkerOptions();
+        historicalMuseumOpts.position(new LatLng(47.331222, -118.698067));
+        historicalMuseumOpts.title("Historical Museum");
+        historicalMuseumOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(historicalMuseumOpts);
+
+        MarkerOptions finneyFieldOpts = new MarkerOptions();
+        finneyFieldOpts.position(new LatLng(47.330168, -118.696025));
+        finneyFieldOpts.title("Finney Field");
+        finneyFieldOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(finneyFieldOpts);
+
+
+
+
+
+
+
+
+
         MarkerOptions opts = new MarkerOptions();
         opts.position(new LatLng(47.333014, -118.690667));
         opts.title("Jonathins");
@@ -147,12 +221,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         opts12.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
         mGoogleMap.addMarker(opts12);
 
-        MarkerOptions opts13 = new MarkerOptions();
-        opts13.position(new LatLng(47.331222, -118.698067));
-        opts13.title("Museum");
-        opts13.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        mGoogleMap.addMarker(opts13);
-
         MarkerOptions opts14 = new MarkerOptions();
         opts14.position(new LatLng(47.328536, -118.695173));
         opts14.title("Horseshoe Tournament");
@@ -190,11 +258,11 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         hamburger.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(hamburger);
 
-        MarkerOptions lions_club = new MarkerOptions();
+        /*MarkerOptions lions_club = new MarkerOptions();
         lions_club.position(new LatLng(47.333500, -118.689367));
         lions_club.title("Lions Club Breakfast");
         lions_club.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-        mGoogleMap.addMarker(lions_club);
+        mGoogleMap.addMarker(lions_club);*/
 
         MarkerOptions any_ocassion = new MarkerOptions();
         any_ocassion.position(new LatLng(47.333177, -118.691142));
@@ -202,36 +270,11 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         any_ocassion.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(any_ocassion);
 
-        MarkerOptions chalkDrawingOpts = new MarkerOptions();
-        chalkDrawingOpts.position(new LatLng(47.333058, -118.689480));
-        chalkDrawingOpts.title("Chalk Drawing");
-        chalkDrawingOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        mGoogleMap.addMarker(chalkDrawingOpts);
-
         MarkerOptions helicopter = new MarkerOptions();
         helicopter.position(new LatLng(47.330168, -118.696025));
         helicopter.title("Helicopter Rides");
         helicopter.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
         mGoogleMap.addMarker(helicopter);
-
-        MarkerOptions bake_sale = new MarkerOptions();
-        bake_sale.position(new LatLng(47.333515, -118.692506));
-        bake_sale.title("Old Town Hall German Bake Sale");
-        bake_sale.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        mGoogleMap.addMarker(bake_sale);
-
-        MarkerOptions bed_race_parade = new MarkerOptions();
-        bed_race_parade.position(new LatLng(47.333287, -118.691819));
-        bed_race_parade.title("Bed Race and Parade");
-        bed_race_parade.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        mGoogleMap.addMarker(bed_race_parade);
-
-        MarkerOptions book = new MarkerOptions();
-        book.position(new LatLng(47.333411, -118.691878));
-        book.title("Book Sale");
-        book.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        book.snippet("book sale");
-        mGoogleMap.addMarker(book);
 
         MarkerOptions laser = new MarkerOptions();
         laser.position(new LatLng(47.334645, -118.688420));
@@ -333,13 +376,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         optss3.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(optss3);
 
-        MarkerOptions optss4 = new MarkerOptions();
-        optss4.position(new LatLng(  47.333358, -118.689933));
-        optss4.title("Chiefs Bar and Grill");
-        optss4.snippet("Hello world!");
-        optss4.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-        mGoogleMap.addMarker(optss4);
-
         MarkerOptions optss5 = new MarkerOptions();
         optss5.position(new LatLng( 47.333851, -118.689038));
         optss5.title("Voise Sausage");
@@ -360,13 +396,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         optss7.snippet("Hello world!");
         optss.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(optss7);
-
-        MarkerOptions optss8 = new MarkerOptions();
-        optss8.position(new LatLng(47.333433, -118.689548));
-        optss8.title("BierGarten");
-        optss8.snippet("Hello world!");
-        optss.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        mGoogleMap.addMarker(optss8);
 
         MarkerOptions optss9 = new MarkerOptions();
         optss9.position(new LatLng(47.333740, -118.69070));
@@ -410,12 +439,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         optss.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
         mGoogleMap.addMarker(optss14);
 
-        MarkerOptions optss19 = new MarkerOptions();
-        optss19.position(new LatLng(47.335962, -118.689212));
-        optss19.title("Rocky Coulee Brewery");
-        optss.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        mGoogleMap.addMarker(optss19);
-
         MarkerOptions optss15 = new MarkerOptions();
         optss15.position(new LatLng(47.330207, -118.696844));
         optss15.title("OHS Baseball Field");
@@ -449,7 +472,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         gotoLocationZoom(47.333380, -118.690408, 15);
         mGoogleMap.setMapType(mGoogleMap.MAP_TYPE_HYBRID);
 
-        buildMap(googleMap);
+        buildMap();
 
         Intent intent = getIntent();
         if (intent != null) {
@@ -457,25 +480,58 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             String event = intent.getStringExtra("event");
             if (prevActivity.equals("weekday")){
                 if (event.equals("Chalk Drawing")) {
-                    gotoLocation(47.333058, -118.689480, event);
+                    gotoLocation(47.333058, -118.689480, event, "entertainment");
                 } else if (event.equals("Tricycle Race")) {
-                    gotoLocation(47.333287, -118.691819, event);
+                    gotoLocation(47.333287, -118.691819, event, "entertainment");
                 } else if (event.equals("Bed Races")) {
-                    gotoLocation(47.333287, -118.691819, event);
+                    gotoLocation(47.333287, -118.691819, event, "entertainment");
                 } else if (event.equals("Biergarten Opens")) {
-                    gotoLocation(47.333433, -118.689548, event);
+                    gotoLocation(47.333433, -118.689548, event, "entertainment");
+                } else if (event.equals("Odessa FFA Pancake Breakfast")) {
+                    gotoLocation(47.333433, -118.689548, event, "food");
+                } else if (event.equals("Breakfast Buffet")) {
+                    gotoLocation(47.333358, -118.689933, event, "food");
+                } else if (event.equals("Friends of the Library Used Book Sale")) {
+                    gotoLocation(47.333411, -118.691878, event, "entertainment");
+                } else if (event.equals("Old Fashioned German Bake Sale")) {
+                    gotoLocation(47.333515, -118.692506, event, "food");
+                } else if (event.equals("Vintage Textile Display")) {
+                    gotoLocation(47.330832, -118.692159, event, "entertainment");
+                } else if (event.equals("Odessa High School FBLA Vendor Street Fair")) {
+                    gotoLocation(47.333655, -118.690482, event, "entertainment");
+                } else if (event.equals("German Food Court")) {
+                    gotoLocation(47.333655, -118.690482, event, "food");
+                } else if (event.equals("Rocky Coulee Brewing Opens")) {
+                    gotoLocation(47.335962, -118.689212, event, "entertainment");
+                } else if (event.equals("Historical Museum Open")) {
+                    gotoLocation(47.331222, -118.698067, event, "entertainment");
+                }  else if (event.equals("Odessa High School Football Game (The Sausage Bowl)")) {
+                    gotoLocation(47.330168, -118.696025, event, "entertainment");
                 }
             }
         }
     }
 
-    private void gotoLocation(double lat, double lng, String event) {
+    private void gotoLocation(double lat, double lng, String event, String eventType) {
         LatLng ll = new LatLng(lat, lng);
         CameraUpdate update = CameraUpdateFactory.newLatLngZoom(ll, 20);
         mGoogleMap.moveCamera(update);
-        mGoogleMap.addMarker(new MarkerOptions()
-                  .position(new LatLng(lat, lng))
-                  .title(event)).showInfoWindow();
+        if (eventType.equals("food")) {
+            mGoogleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(lat, lng))
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+                    .title(event)).showInfoWindow();
+        } else if (eventType.equals("entertainment")) {
+            mGoogleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(lat, lng))
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW))
+                    .title(event)).showInfoWindow();
+        } else if (eventType.equals("other")) {
+            mGoogleMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(lat, lng))
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.googleblack))
+                    .title(event)).showInfoWindow();
+        }
     }
 
     private void gotoLocationZoom(double lat, double lng, float zoom) {

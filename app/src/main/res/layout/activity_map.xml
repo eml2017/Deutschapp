@@ -52,6 +52,15 @@
 
     </GridLayout>
 
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="red = food, yellow = entertainment, black = other"
+        android:textColor="@color/festBlack"
+        android:textSize="16dp" />
+
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -60,6 +61,19 @@ public class FridayActivity extends AppCompatActivity {
             }
         };
         fridayListView.setAdapter(arrayAdapter);
+
+        fridayListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(FridayActivity.this, MapActivity.class);
+                Object selectedEvent = parent.getItemAtPosition(position);
+                Event event = ((Event) selectedEvent);
+                String name = event.getName();
+                intent.putExtra("prevActivity", "weekday");
+                intent.putExtra("event", name);
+                startActivityForResult(intent, 1);
+            }
+        });
     }
 
     public void goBackHome(View view) {
