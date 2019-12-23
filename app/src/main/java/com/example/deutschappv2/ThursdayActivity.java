@@ -35,7 +35,7 @@ public class ThursdayActivity extends AppCompatActivity {
         thursdayEventList.add(new Event("Bed Races", "First Avenue", "After the tricycle race"));
         thursdayEventList.add(new Event("Biergarten Opens", "Biergarten", "7:00-11:00 PM"));
 
-        ListView listView = (ListView) findViewById(R.id.thursdayListView);
+        ListView thursdayListView = (ListView) findViewById(R.id.thursdayListView);
         ArrayAdapter<Event> arrayAdapter = new ArrayAdapter<Event>(this,
                 android.R.layout.simple_list_item_2,
                 android.R.id.text1,
@@ -52,7 +52,7 @@ public class ThursdayActivity extends AppCompatActivity {
                 return view;
             }
         };
-        listView.setAdapter(arrayAdapter);
+        thursdayListView.setAdapter(arrayAdapter);
     }
 
     public void goBackHome(View view) {
