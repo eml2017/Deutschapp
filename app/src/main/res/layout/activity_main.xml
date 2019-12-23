@@ -23,6 +23,7 @@
 
     <Button
         android:id="@+id/executiveLogInButton"
+        android:onClick="showGreetings"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -58,6 +59,7 @@
 
     <Button
         android:id="@+id/thursdayButton"
+        android:onClick="showGreetings"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -71,6 +73,7 @@
 
     <Button
         android:id="@+id/fridayButton"
+        android:onClick="showGreetings"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -84,6 +87,7 @@
 
     <Button
         android:id="@+id/saturdayButton"
+        android:onClick="showGreetings"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -97,6 +101,7 @@
 
     <Button
         android:id="@+id/sundayButton"
+        android:onClick="showGreetings"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -110,6 +115,7 @@
 
     <Button
         android:id="@+id/mapButton"
+        android:onClick="showGreetings"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -122,6 +128,7 @@
 
     <Button
         android:id="@+id/directoryButton"
+        android:onClick="showGreetings"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -131,6 +138,5 @@
         android:layout_columnSpan="1"
         android:textSize="20dp"
         android:background="@color/festYellow" />
-
 
 </GridLayout>
