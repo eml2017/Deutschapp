@@ -33,7 +33,7 @@ public class SaturdayActivity extends AppCompatActivity {
         saturdayEventList = new ArrayList<Event>();
         saturdayEventList.add(new Event("Lions Club Farmer's Breakfast", "Community Center", "7:00-10:00 AM"));
         saturdayEventList.add(new Event("Breakfast Buffet", "Chiefs Bar & Grill", "7:00-11:00 AM"));
-        saturdayEventList.add(new Event("Buffet Breakfast", "Odessa Golf & RV", "8:00-10:00 AM"));
+        saturdayEventList.add(new Event("Breakfast Served", "Odessa Golf & RV", "8:00-10:00 AM"));
         saturdayEventList.add(new Event("Odessa High School ASB Fun Run", "City Park", "8:30 AM (registration & check-in 7:00-8:00 AM)"));
         saturdayEventList.add(new Event("Friends of the Library Used Book Sale", "18 W 1st Ave", "9:00 AM-5:00 PM"));
         saturdayEventList.add(new Event("Odessa High School FBLA Vendor Street Fair", "Division Street", "10:00 AM-7:00 PM"));
@@ -42,7 +42,7 @@ public class SaturdayActivity extends AppCompatActivity {
         saturdayEventList.add(new Event("Biergarten Opens", "Biergarten", "11:00-1:00 AM (after parade)"));
         saturdayEventList.add(new Event("Rocky Coulee Brewing Opens", "Rocky Coulee Brewing Co.", "11:00 AM (after parade)"));
         saturdayEventList.add(new Event("Kid Zone", "City Park", "12:00-6:00 PM"));
-        saturdayEventList.add(new Event("Historical Museum Open", "West 4th Ave. & Elm St.", "12:00-6:00 PM"));
+        saturdayEventList.add(new Event("Historical Museum Opens", "West 4th Ave. & Elm St.", "12:00-6:00 PM"));
         saturdayEventList.add(new Event("Ag Machinery Display", "Historisches Museum", "12:00-6:00 PM"));
         saturdayEventList.add(new Event("Vintage Textile Display", "St. Matthew's Church (Alder St & 4th Ave)", "12:00-5:00 PM"));
         saturdayEventList.add(new Event("Poker Run Tournament 2-Person Scramble", "Odessa Golf & RV", "1:00 PM"));

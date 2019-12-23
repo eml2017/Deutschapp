@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -32,14 +33,14 @@ public class SundayActivity extends AppCompatActivity {
         sundayEventList = new ArrayList<Event>();
         sundayEventList.add(new Event("Breakfast Buffet", "Chiefs Bar & Grill", "7:00-11:00 AM"));
         sundayEventList.add(new Event("Odessa FBLA Pancake Feed & More", "Community Center", "7:30-10:30 AM"));
-        sundayEventList.add(new Event("Breakfast served", "Odessa Golf & RV", "8:00-10:00 AM"));
+        sundayEventList.add(new Event("Breakfast Served", "Odessa Golf & RV", "8:00-10:00 AM"));
         sundayEventList.add(new Event("Mass", "St. Joseph's Catholic Church", "8:00 AM"));
         sundayEventList.add(new Event("Outdoor Church Service by Odessa Ministerial Association", "Outdoor Stage", "10:30 AM"));
         sundayEventList.add(new Event("Zion Emmanuel Lutheran Church Service", "Zion Emmanuel Lutheran Church", "10:30 AM"));
         sundayEventList.add(new Event("Odessa High School FBLA Vendor Street Fair", "Division Street", "11:00 AM-2:00 PM"));
         sundayEventList.add(new Event("Biergarten Opens", "Biergarten", "11:30 AM-10:00 PM"));
         sundayEventList.add(new Event("Bike Show", "Rolling Thunder Pizza", "12:00-2:00 PM"));
-        sundayEventList.add(new Event("Vintage Textile Display & Genealogy Room", "St. Matthew's Church (Alder St & 4th Ave)", "12:00-4:00 PM"));
+        sundayEventList.add(new Event("Vintage Textile Display", "St. Matthew's Church (Alder St & 4th Ave)", "12:00-4:00 PM"));
         sundayEventList.add(new Event("Historical Museum Opens", "West 4th Ave. & Elm St.", "12:00-4:00 PM"));
         sundayEventList.add(new Event("German Food Court", "Fest Platz on Main Street (First Avenue)", "until food runs out"));
 
@@ -61,6 +62,19 @@ public class SundayActivity extends AppCompatActivity {
             }
         };
         sundayListView.setAdapter(arrayAdapter);
+
+        sundayListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(SundayActivity.this, MapActivity.class);
+                Object selectedEvent = parent.getItemAtPosition(position);
+                Event event = ((Event) selectedEvent);
+                String name = event.getName();
+                intent.putExtra("prevActivity", "weekday");
+                intent.putExtra("event", name);
+                startActivityForResult(intent, 1);
+            }
+        });
     }
 
     public void goBackHome(View view) {

@@ -40,7 +40,7 @@ public class FridayActivity extends AppCompatActivity {
         fridayEventList.add(new Event("German Food Court", "Fest Platz on Main Street (First Avenue)", "11:00 AM-8:00 PM"));
         fridayEventList.add(new Event("Biergarten Opens", "Biergarten", "12:30 PM-1:00 AM"));
         fridayEventList.add(new Event("Rocky Coulee Brewing Opens", "Rocky Coulee Brewing Co.", "2:00 PM"));
-        fridayEventList.add(new Event("Historical Museum Open", "West 4th Ave. & Elm St.", "2:00-6:00 PM"));
+        fridayEventList.add(new Event("Historical Museum Opens", "West 4th Ave. & Elm St.", "2:00-6:00 PM"));
         fridayEventList.add(new Event("Odessa High School Football Game (The Sausage Bowl)", "Finney Field", "7:00 PM"));
 
         ListView fridayListView = (ListView) findViewById(R.id.fridayListView);
