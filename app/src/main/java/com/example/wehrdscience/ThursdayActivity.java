@@ -60,8 +60,11 @@ public class ThursdayActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ThursdayActivity.this, MapActivity.class);
+                Object selectedEvent = parent.getItemAtPosition(position);
+                Event event = ((Event) selectedEvent);
+                String name = event.getName();
                 intent.putExtra("prevActivity", "weekday");
-                intent.putExtra("event", "Corn Booth");
+                intent.putExtra("event", name);
                 startActivityForResult(intent, 1);
             }
         });

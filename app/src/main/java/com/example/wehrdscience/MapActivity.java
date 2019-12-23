@@ -40,13 +40,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         }
     }
 
-    public void addMarker(GoogleMap googleMap, double lat, double lng, String event, MarkerOptions markerOptions) {
-        gotoLocationZoom(lat, lng, 20);
-        googleMap.addMarker(new MarkerOptions()
-                .position(new LatLng(lat, lng))
-                .title(event)).showInfoWindow();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -209,11 +202,11 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         any_ocassion.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(any_ocassion);
 
-        MarkerOptions chalk = new MarkerOptions();
-        chalk.position(new LatLng(47.333058, -118.689480));
-        chalk.title("Chalk Drawing");
-        chalk.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        mGoogleMap.addMarker(chalk);
+        MarkerOptions chalkDrawingOpts = new MarkerOptions();
+        chalkDrawingOpts.position(new LatLng(47.333058, -118.689480));
+        chalkDrawingOpts.title("Chalk Drawing");
+        chalkDrawingOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(chalkDrawingOpts);
 
         MarkerOptions helicopter = new MarkerOptions();
         helicopter.position(new LatLng(47.330168, -118.696025));
@@ -463,17 +456,21 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             String prevActivity = intent.getStringExtra("prevActivity");
             String event = intent.getStringExtra("event");
             if (prevActivity.equals("weekday")){
-                Toast.makeText(this, event, Toast.LENGTH_LONG).show();
+                if (event.equals("Chalk Drawing")) {
+                    gotoLocation(47.333058, -118.689480, event);
+                }
             }
         }
     }
 
-    private void gotoLocation(double lat, double lng) {
+    private void gotoLocation(double lat, double lng, String event) {
         LatLng ll = new LatLng(lat, lng);
-        CameraUpdate update = CameraUpdateFactory.newLatLng(ll);
+        CameraUpdate update = CameraUpdateFactory.newLatLngZoom(ll, 20);
         mGoogleMap.moveCamera(update);
+        mGoogleMap.addMarker(new MarkerOptions()
+                  .position(new LatLng(lat, lng))
+                  .title(event)).showInfoWindow();
     }
-
 
     private void gotoLocationZoom(double lat, double lng, float zoom) {
         LatLng ll = new LatLng(lat, lng);
