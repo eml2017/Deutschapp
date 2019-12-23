@@ -1,4 +1,4 @@
-package com.example.deutschappv2;
+package com.example.wehrdscience;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.deutschappv2">
+    package="com.example.wehrdscience">
 
     <application
         android:allowBackup="true"
@@ -9,13 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SundayActivity"></activity>
-        <activity android:name=".SaturdayActivity" />
-        <activity android:name=".FridayActivity" />
-        <activity android:name=".ThursdayActivity" />
-        <activity android:name=".DirectoryActivity" />
-        <activity android:name=".ExecutiveLogInActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.wehrdscience.SundayActivity"></activity>
+        <activity android:name="com.example.wehrdscience.SaturdayActivity" />
+        <activity android:name="com.example.wehrdscience.FridayActivity" />
+        <activity android:name="com.example.wehrdscience.ThursdayActivity" />
+        <activity android:name="com.example.wehrdscience.DirectoryActivity" />
+        <activity android:name="com.example.wehrdscience.ExecutiveLogInActivity" />
+        <activity android:name="com.example.wehrdscience.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

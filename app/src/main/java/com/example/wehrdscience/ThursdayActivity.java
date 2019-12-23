@@ -3,7 +3,7 @@
  * Updated by Elizabeth on 12/22/2019.
  */
 
-package com.example.deutschappv2;
+package com.example.wehrdscience;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
