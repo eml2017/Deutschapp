@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    // Actions performed when a button is selected on the home page
     // Map action isn't done yet
     public void showGreetings(View view) {
         String button_text;
