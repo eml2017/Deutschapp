@@ -458,6 +458,12 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             if (prevActivity.equals("weekday")){
                 if (event.equals("Chalk Drawing")) {
                     gotoLocation(47.333058, -118.689480, event);
+                } else if (event.equals("Tricycle Race")) {
+                    gotoLocation(47.333287, -118.691819, event);
+                } else if (event.equals("Bed Races")) {
+                    gotoLocation(47.333287, -118.691819, event);
+                } else if (event.equals("Biergarten Opens")) {
+                    gotoLocation(47.333433, -118.689548, event);
                 }
             }
         }
