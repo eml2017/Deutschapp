@@ -26,6 +26,7 @@
             android:background="@drawable/home"
             android:onClick="goBackHome"
             android:freezesText="false"
+            android:layout_margin="10dp"
             android:layout_columnSpan="1" />
 
         <LinearLayout

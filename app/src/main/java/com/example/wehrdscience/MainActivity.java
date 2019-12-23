@@ -33,8 +33,9 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, SundayActivity.class);
             startActivity(intent);
         } else if (button_text.equals("Map")) {
-            Intent intent = new Intent(this, MapActivity.class);
-            startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, MapActivity.class);
+            intent.putExtra("prevActivity", "map");
+            startActivityForResult(intent, 1);
         } else if (button_text.equals("Directory")) {
             Intent intent = new Intent(this, DirectoryActivity.class);
             startActivity(intent);

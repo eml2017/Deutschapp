@@ -29,7 +29,6 @@ import java.io.IOException;
 import java.util.List;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
-
     GoogleMap mGoogleMap;
 
     public void goBackHome(View view) {
@@ -41,12 +40,18 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         }
     }
 
+    public void addMarker(GoogleMap googleMap, double lat, double lng, String event, MarkerOptions markerOptions) {
+        gotoLocationZoom(lat, lng, 20);
+        googleMap.addMarker(new MarkerOptions()
+                .position(new LatLng(lat, lng))
+                .title(event)).showInfoWindow();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (googleSevicesAvailable()) {
-            Toast.makeText(this, "Main Map", Toast.LENGTH_LONG).show();
+        if (googleServicesAvailable()) {
             setContentView(R.layout.activity_map);
             initMap();
 
@@ -60,7 +65,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
-    public boolean googleSevicesAvailable() {
+    public boolean googleServicesAvailable() {
         GoogleApiAvailability api = GoogleApiAvailability.getInstance();
         int isAvailable = api.isGooglePlayServicesAvailable(this);
         if (isAvailable == ConnectionResult.SUCCESS) {
@@ -76,130 +81,106 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         return false;
     }
 
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mGoogleMap = googleMap;
-        gotoLocationZoom(47.333380, -118.690408, 15);
-        mGoogleMap.setMapType(mGoogleMap.MAP_TYPE_HYBRID);
-
-
+    public void buildMap(GoogleMap googleMap) {
         MarkerOptions opts = new MarkerOptions();
         opts.position(new LatLng(47.333014, -118.690667));
         opts.title("Jonathins");
-        opts.snippet("There be Dragons here!");
         opts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(opts);
 
         MarkerOptions opts2 = new MarkerOptions();
         opts2.position(new LatLng(47.333072, -118.690781));
         opts2.title("Reuben Booth");
-        opts2.snippet("Hello world!");
         opts2.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(opts2);
 
         MarkerOptions opts3 = new MarkerOptions();
         opts3.position(new LatLng(47.333074, -118.690702));
         opts3.title("Corn Booth");
-        opts3.snippet("");
         opts3.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(opts3);
 
-        MarkerOptions opts4 = new MarkerOptions();
+        /*MarkerOptions opts4 = new MarkerOptions();
         opts4.position(new LatLng(47.333072, -118.690781));
         opts4.title("Reuben Booth");
-        opts4.snippet("");
         opts4.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-        mGoogleMap.addMarker(opts4);
+        mGoogleMap.addMarker(opts4);*/
 
         MarkerOptions opts5 = new MarkerOptions();
         opts5.position(new LatLng(47.333608, -118.690461));
         opts5.title("Bratwurst/Fry Booth");
-        opts5.snippet("");
         opts5.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(opts5);
 
         MarkerOptions opts6 = new MarkerOptions();
         opts6.position(new LatLng(47.333410, -118.690523));
         opts6.title("Cabbage Roll Booth");
-        opts6.snippet("");
         opts6.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(opts6);
 
         MarkerOptions opts7 = new MarkerOptions();
         opts7.position(new LatLng(47.333655, -118.690482));
         opts7.title("Apple Strudel Booth");
-        opts7.snippet("");
         opts7.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(opts7);
 
         MarkerOptions opts8 = new MarkerOptions();
         opts8.position(new LatLng(47.333094, -118.690794));
         opts8.title("Shaved Ice Booth");
-        opts8.snippet("");
         opts8.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(opts8);
 
         MarkerOptions opts9 = new MarkerOptions();
         opts9.position(new LatLng(47.333190, -118.691646));
         opts9.title("Das Kraut House");
-        opts9.snippet("");
         opts9.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(opts9);
 
         MarkerOptions opts10 = new MarkerOptions();
         opts10.position(new LatLng(47.333141, -118.689822));
         opts10.title("Granny Bar Bar");
-        opts10.snippet("");
         opts10.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         mGoogleMap.addMarker(opts10);
 
         MarkerOptions opts11 = new MarkerOptions();
         opts11.position(new LatLng(47.333580, -118.690289));
         opts11.title("Outdoor Stage");
-        opts11.snippet("");
         opts11.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
         mGoogleMap.addMarker(opts11);
 
         MarkerOptions opts12 = new MarkerOptions();
         opts12.position(new LatLng(47.334053, -118.687609));
         opts12.title("Fun Run Starting Line");
-        opts12.snippet("");
         opts12.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
         mGoogleMap.addMarker(opts12);
 
         MarkerOptions opts13 = new MarkerOptions();
         opts13.position(new LatLng(47.331222, -118.698067));
         opts13.title("Museum");
-        opts13.snippet("");
         opts13.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
         mGoogleMap.addMarker(opts13);
 
         MarkerOptions opts14 = new MarkerOptions();
         opts14.position(new LatLng(47.328536, -118.695173));
         opts14.title("Horseshoe Tournament");
-        opts14.snippet("");
         opts14.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
         mGoogleMap.addMarker(opts14);
 
         MarkerOptions opts16 = new MarkerOptions();
         opts16.position(new LatLng(47.333200, -118.690730));
         opts16.title("Information Booth");
-        opts16.snippet("");
         opts16.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
         mGoogleMap.addMarker(opts16);
 
         MarkerOptions opts17 = new MarkerOptions();
         opts17.position(new LatLng(47.331323, -118.689551));
         opts17.title("Heritage Church");
-        opts17.snippet("");
         opts17.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
         mGoogleMap.addMarker(opts17);
 
         MarkerOptions opts18 = new MarkerOptions();
         opts18.position(new LatLng(47.330132, -118.698375));
         opts18.title("OHS Softball Field");
-        opts18.snippet("");
         opts18.icon(BitmapDescriptorFactory.fromResource(R.drawable.googleblack));
         //opts18.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
         mGoogleMap.addMarker(opts18);
@@ -208,56 +189,48 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         johnathons.position(new LatLng(47.333014, -118.690667));
         johnathons.title("Johnathan's Booth");
         johnathons.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-        johnathons.snippet("This is a real place");
         mGoogleMap.addMarker(johnathons);
 
         MarkerOptions hamburger = new MarkerOptions();
         hamburger.position(new LatLng(47.333534, -118.690400));
         hamburger.title("Hamburger Booth");
         hamburger.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-        hamburger.snippet("There are burgers here");
         mGoogleMap.addMarker(hamburger);
 
         MarkerOptions lions_club = new MarkerOptions();
         lions_club.position(new LatLng(47.333500, -118.689367));
         lions_club.title("Lions Club Breakfast");
         lions_club.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-        lions_club.snippet("Hopefully this is the correct location");
         mGoogleMap.addMarker(lions_club);
 
         MarkerOptions any_ocassion = new MarkerOptions();
         any_ocassion.position(new LatLng(47.333177, -118.691142));
         any_ocassion.title("Any Occasion Banquet Hall Ice Cream");
         any_ocassion.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-        any_ocassion.snippet("Ice cream");
         mGoogleMap.addMarker(any_ocassion);
 
         MarkerOptions chalk = new MarkerOptions();
         chalk.position(new LatLng(47.333058, -118.689480));
         chalk.title("Chalk Drawing");
         chalk.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        chalk.snippet("This is on Thursday");
         mGoogleMap.addMarker(chalk);
 
         MarkerOptions helicopter = new MarkerOptions();
         helicopter.position(new LatLng(47.330168, -118.696025));
         helicopter.title("Helicopter Rides");
         helicopter.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        helicopter.snippet("helicopter");
         mGoogleMap.addMarker(helicopter);
 
         MarkerOptions bake_sale = new MarkerOptions();
         bake_sale.position(new LatLng(47.333515, -118.692506));
         bake_sale.title("Old Town Hall German Bake Sale");
         bake_sale.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        bake_sale.snippet("bake sale");
         mGoogleMap.addMarker(bake_sale);
 
         MarkerOptions bed_race_parade = new MarkerOptions();
         bed_race_parade.position(new LatLng(47.333287, -118.691819));
         bed_race_parade.title("Bed Race and Parade");
         bed_race_parade.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        bed_race_parade.snippet("bed_race_parade");
         mGoogleMap.addMarker(bed_race_parade);
 
         MarkerOptions book = new MarkerOptions();
@@ -475,10 +448,25 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mGoogleMap.addMarker(optss17);
 
         // https://www.youtube.com/watch?v=xIKUnadxxBc
-
     }
 
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mGoogleMap = googleMap;
+        gotoLocationZoom(47.333380, -118.690408, 15);
+        mGoogleMap.setMapType(mGoogleMap.MAP_TYPE_HYBRID);
 
+        buildMap(googleMap);
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            String prevActivity = intent.getStringExtra("prevActivity");
+            String event = intent.getStringExtra("event");
+            if (prevActivity.equals("weekday")){
+                Toast.makeText(this, event, Toast.LENGTH_LONG).show();
+            }
+        }
+    }
 
     private void gotoLocation(double lat, double lng) {
         LatLng ll = new LatLng(lat, lng);
@@ -491,11 +479,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         LatLng ll = new LatLng(lat, lng);
         CameraUpdate update = CameraUpdateFactory.newLatLngZoom(ll, zoom);
         mGoogleMap.moveCamera(update);
-
     }
 
     public void geoLocate(View view) throws IOException {
-
         EditText et = (EditText) findViewById(R.id.editText2);
         String location = et.getText().toString();
 
@@ -505,9 +491,5 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         String locality = address.getLocality();
 
         Toast.makeText(this, locality, Toast.LENGTH_LONG).show();
-
-
     }
-
-
 }

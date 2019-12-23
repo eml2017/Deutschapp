@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -54,6 +55,16 @@ public class ThursdayActivity extends AppCompatActivity {
             }
         };
         thursdayListView.setAdapter(arrayAdapter);
+
+        thursdayListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(ThursdayActivity.this, MapActivity.class);
+                intent.putExtra("prevActivity", "weekday");
+                intent.putExtra("event", "Corn Booth");
+                startActivityForResult(intent, 1);
+            }
+        });
     }
 
     public void goBackHome(View view) {
@@ -63,25 +74,5 @@ public class ThursdayActivity extends AppCompatActivity {
             Intent homeIntent = new Intent(ThursdayActivity.this, MainActivity.class);
             startActivity(homeIntent);
         }
-    }
-
-    public void openMaps(View view) {
-        Toast toast = Toast.makeText(ThursdayActivity.this, "TODO: Work on specific map activities", Toast.LENGTH_LONG);
-        toast.show();
-        /*String button_text;
-        button_text = ((TextView) view).getText().toString();
-        if (button_text.equals("Chalk Drawing (Wheatland Bank) ..... 5pm")) {
-            Intent intent = new Intent(this, ChalkMap.class);
-            startActivity(intent);
-        } else if (button_text.equals("Tricycle Race (First Avenue) ..... 6pm")) {
-            Intent intent = new Intent(this, ParadeMap.class);
-            startActivity(intent);
-        } else if (button_text.equals("Bed Race (First Avenue) ..... after the tricycle race")) {
-            Intent intent = new Intent(this, ParadeMap.class);
-            startActivity(intent);
-        } else if (button_text.equals("German Biergarten ..... 7pm-11pm")) {
-            Intent intent = new Intent(this, BierGarten.class);
-            startActivity(intent);
-        }*/
     }
 }
