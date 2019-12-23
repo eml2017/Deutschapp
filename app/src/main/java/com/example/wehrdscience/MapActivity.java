@@ -141,6 +141,24 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         finneyFieldOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
         mGoogleMap.addMarker(finneyFieldOpts);
 
+        MarkerOptions golfCourseOpts = new MarkerOptions();
+        golfCourseOpts.position(new LatLng(47.331378, -118.701463));
+        golfCourseOpts.title("Odessa Golf & RV");
+        golfCourseOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(golfCourseOpts);
+
+        MarkerOptions cityParkOpts = new MarkerOptions();
+        cityParkOpts.position(new LatLng(47.334411, -118.687028));
+        cityParkOpts.title("Odessa City Park");
+        cityParkOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(cityParkOpts);
+
+        MarkerOptions rollingThunderOpts = new MarkerOptions();
+        rollingThunderOpts.position(new LatLng(47.333199, -118.691528));
+        rollingThunderOpts.title("Rolling Thunder");
+        rollingThunderOpts.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+        mGoogleMap.addMarker(rollingThunderOpts);
+
 
 
 
@@ -404,12 +422,12 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         optss.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
         mGoogleMap.addMarker(optss9);
 
-        MarkerOptions optss10 = new MarkerOptions();
+        /*MarkerOptions optss10 = new MarkerOptions();
         optss10.position(new LatLng(47.331378, -118.701463));
         optss10.title("Golf Course");
         optss10.snippet("Hello world!");
         optss.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-        mGoogleMap.addMarker(optss10);
+        mGoogleMap.addMarker(optss10);*/
 
         MarkerOptions optss11 = new MarkerOptions();
         optss11.position(new LatLng(47.331228, -118.688868));
@@ -446,14 +464,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         optss15.icon(BitmapDescriptorFactory.fromResource(R.drawable.googleblack));
         //optss.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
         mGoogleMap.addMarker(optss15);
-
-        MarkerOptions optss16 = new MarkerOptions();
-        optss16.position(new LatLng(47.334411, -118.687028));
-        optss16.title("Odessa City Park");
-        optss16.snippet("Hello world!");
-        optss16.icon(BitmapDescriptorFactory.fromResource(R.drawable.googleblack));
-        // optss.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
-        mGoogleMap.addMarker(optss16);
 
         MarkerOptions optss17 = new MarkerOptions();
         optss17.position(new LatLng(47.331190, -118.700086));
@@ -505,8 +515,36 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     gotoLocation(47.335962, -118.689212, event, "entertainment");
                 } else if (event.equals("Historical Museum Open")) {
                     gotoLocation(47.331222, -118.698067, event, "entertainment");
-                }  else if (event.equals("Odessa High School Football Game (The Sausage Bowl)")) {
+                } else if (event.equals("Odessa High School Football Game (The Sausage Bowl)")) {
                     gotoLocation(47.330168, -118.696025, event, "entertainment");
+                } else if (event.equals("Lions Club Farmer's Breakfast")) {
+                    gotoLocation(47.333433, -118.689548, event, "entertainment");
+                } else if (event.equals("Buffet Breakfast")) {
+                    gotoLocation(47.331378, -118.701463, event, "food");
+                } else if (event.equals("Odessa High School ASB Fun Run")) {
+                    gotoLocation(47.334411, -118.687028, event, "entertainment");
+                } else if (event.equals("Kiddie and General Parade")) {
+                    gotoLocation(47.333287, -118.691819, event, "entertainment");
+                } else if (event.equals("Kid Zone")) {
+                    gotoLocation(47.334411, -118.687028, event, "entertainment");
+                } else if (event.equals("Ag Machinery Display")) {
+                    gotoLocation(47.331222, -118.698067, event, "entertainment");
+                } else if (event.equals("Poker Run Tournament 2-Person Scramble")) {
+                    gotoLocation(47.331378, -118.701463, event, "entertainment");
+                } else if (event.equals("Old Town Hall Rejuvenation Project Cash Bingo")) {
+                    gotoLocation(47.333515, -118.692506, event, "entertainment");
+                } else if (event.equals("German Minute to Win It")) {
+                    gotoLocation(47.335962, -118.689212, event, "entertainment");
+                } else if (event.equals("Guitar Workshop")) {
+                    gotoLocation(47.333199, -118.691528, event, "entertainment");
+                } else if (event.equals("Rocky Coulee Brewing Happy Hour Specials")) {
+                    gotoLocation(47.335962, -118.689212, event, "entertainment");
+                } else if (event.equals("Rocky Coulee Brewing Fest Games")) {
+                    gotoLocation(47.335962, -118.689212, event, "entertainment");
+                } else if (event.equals("Rocky Coulee Brewing Beer Stein Holding Contest")) {
+                    gotoLocation(47.335962, -118.689212, event, "entertainment");
+                } else {
+                    Toast.makeText(this, "not done", Toast.LENGTH_LONG).show();
                 }
             }
         }
