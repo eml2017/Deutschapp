@@ -382,7 +382,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         if (intent != null) {
             String prevActivity = intent.getStringExtra("prevActivity");
             String event = intent.getStringExtra("event");
-            if (prevActivity.equals("weekday")){
+            if (prevActivity.equals("weekday") || prevActivity.equals("stage")){
                 if (event.equals("Chalk Drawing")) {
                     gotoLocation(47.333058, -118.689480, event, "entertainment");
                 } else if (event.equals("Tricycle Race")) {
@@ -447,6 +447,12 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     gotoLocation(47.325219, -118.689959, event, "entertainment");
                 } else if (event.equals("Bike Show")) {
                     gotoLocation(47.333199, -118.691528, event, "entertainment");
+                } else if (event.equals("Biergarten")) {
+                    gotoLocation(47.333433, -118.689548, event, "entertainment");
+                } else if (event.equals("Outdoor Stage")) {
+                    gotoLocation(47.333580, -118.690289, event, "entertainment");
+                }  else if (event.equals("Rocky Coulee Brewing")) {
+                    gotoLocation(47.335962, -118.689212, event, "entertainment");
                 } else {
                     Toast.makeText(this, "not done", Toast.LENGTH_LONG).show();
                 }
