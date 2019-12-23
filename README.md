@@ -1,12 +1,18 @@
 Deutschapp
 ---------------------------------
-#Authors
-Thomas Parham, Cole Kissler, Elizabeth Larson
-Under the direction of Jeff Wehr
+Android app for Odessa's yearly German festival (Deutschesfest)
 
-#Version
-v 2.0
 
-#Created/Test Runs Done With:
+
+Thomas Parham, Cole Kissler, Elizabeth Larson (under the direction of Jeff Wehr)
+
+Odessa High School Computer Science Program - Odessa, WA
+
+Version 2.0
+
+In Development 2016-present
+
+Created/Test Runs Done With:
 * SDK 29
-* Pixel 2 API 27
+* Pixel 2 API 27 emulator
+* Android Studio version 3.5
