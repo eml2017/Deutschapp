@@ -8,26 +8,26 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/festDatesTextView"
-        android:text="September 17-20, 2020"
-        android:textColor="@color/festBlack"
-        android:gravity="bottom"
-        android:textSize="16dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        android:layout_rowWeight=".5"
-        android:layout_columnWeight="1"
-        android:layout_columnSpan="1" />
-
     <Button
         android:id="@+id/executiveLogInButton"
-        android:onClick="showGreetings"
+        android:onClick="buttonAction"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
         android:text="Executive Log-In"
+        android:layout_rowWeight=".5"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="1"
+        android:textSize="20dp"
+        android:background="@color/festYellow" />
+
+    <Button
+        android:id="@+id/stageScheduleButton"
+        android:onClick="buttonAction"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="Stage Schedule"
         android:layout_rowWeight=".5"
         android:layout_columnWeight="1"
         android:layout_columnSpan="1"
@@ -57,9 +57,22 @@
         android:layout_columnWeight="1"
         android:layout_columnSpan="2" />
 
+    <TextView
+        android:id="@+id/festDatesTextView"
+        android:text="September 17-20, 2020"
+        android:textColor="@color/festBlack"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_rowWeight=".25"
+        android:layout_columnWeight="1"
+        android:layout_columnSpan="2" />
+
     <Button
         android:id="@+id/thursdayButton"
-        android:onClick="showGreetings"
+        android:onClick="buttonAction"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -73,7 +86,7 @@
 
     <Button
         android:id="@+id/fridayButton"
-        android:onClick="showGreetings"
+        android:onClick="buttonAction"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -87,7 +100,7 @@
 
     <Button
         android:id="@+id/saturdayButton"
-        android:onClick="showGreetings"
+        android:onClick="buttonAction"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -101,7 +114,7 @@
 
     <Button
         android:id="@+id/sundayButton"
-        android:onClick="showGreetings"
+        android:onClick="buttonAction"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -115,7 +128,7 @@
 
     <Button
         android:id="@+id/mapButton"
-        android:onClick="showGreetings"
+        android:onClick="buttonAction"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -128,7 +141,7 @@
 
     <Button
         android:id="@+id/directoryButton"
-        android:onClick="showGreetings"
+        android:onClick="buttonAction"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"

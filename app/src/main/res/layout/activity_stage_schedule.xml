@@ -21,8 +21,8 @@
         android:layout_marginStart="19dp" />
 
     <TextView
-        android:id="@+id/directoryTextView"
-        android:text="Directory"
+        android:id="@+id/stageScheduleTextView"
+        android:text="Stage Schedules"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="36sp"
@@ -32,41 +32,41 @@
         android:layout_marginTop="13dp" />
 
     <Button
-        android:id="@+id/foodButton"
-        android:layout_width="250dp"
+        android:id="@+id/biergartenButton"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:background="@color/festRed"
         android:onClick="buttonAction"
         android:layout_gravity="center"
-        android:text="Food"
+        android:text="Biergarten"
         android:textColor="@color/festWhite"
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/entertainmentButton"
-        android:layout_width="250dp"
+        android:id="@+id/outdoorStageButton"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:background="@color/festYellow"
         android:onClick="buttonAction"
         android:layout_gravity="center"
-        android:text="Entertainment"
+        android:text="Outdoor Stage"
         android:textColor="@color/festBlack"
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/otherButton"
-        android:layout_width="250dp"
+        android:id="@+id/rockyCouleeBrewingButton"
+        android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:background="@color/festBlack"
         android:onClick="buttonAction"
         android:layout_gravity="center"
-        android:text="Other"
+        android:text="Rocky Coulee Brewing"
         android:textColor="@color/festWhite"
         android:textSize="24sp" />
 

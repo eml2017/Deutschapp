@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,8 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    // Map action isn't done yet
-    public void showGreetings(View view) {
+    public void buttonAction(View view) {
         String button_text;
         button_text = ((Button) view).getText().toString();
         if (button_text.equals("Thursday")) {
@@ -39,7 +37,12 @@ public class MainActivity extends AppCompatActivity {
         } else if (button_text.equals("Directory")) {
             Intent intent = new Intent(this, DirectoryActivity.class);
             startActivity(intent);
+        } else if (button_text.equals("Executive Log-In")) {
+            Intent intent = new Intent(this, ExecutiveLogInActivity.class);
+            startActivity(intent);
+        } else if (button_text.equals("Stage Schedule")) {
+            Intent intent = new Intent(this, StageScheduleActivity.class);
+            startActivity(intent);
         }
-
     }
 }

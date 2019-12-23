@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExecutiveLogInActivity">
+    android:orientation="vertical"
+    tools:context=".ExecutiveLogInActivity"
+    android:background="@drawable/background">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/homeButton"
+        android:text="Home"
+        android:textSize="1dp"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:background="@drawable/home"
+        android:onClick="goBackHome"
+        android:freezesText="false"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp" />
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:text="Currently under construction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:textColor="@color/festBlack"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:id="@+id/moreInfoTextView"
+        android:text="This feature is currently unavailable. Check in next year for more updates!"
+        android:textColor="@color/festBlack"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp" />
+
+</LinearLayout>

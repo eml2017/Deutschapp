@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Deutschapp</string>
     <string name="title_activity_map">Map</string>
+    <string name="title_activity_live_music">LiveMusicActivity</string>
 </resources>
