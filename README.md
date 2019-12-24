@@ -14,7 +14,16 @@ Created/Test Runs Done With
 * Android Studio version 3.5
 
 
-Need to Finish
+New Additions Added/Edited
+---------------------------------
+* Updated all layouts to fit different emulators
+* Cleaned up maps (streamlined into four smaller maps)
+* Updated to 2020 fest dates
+* Added stage schedules button
+* Updated schedules (2019... schedule on fest website)
+
+
+Future Steps
 ---------------------------------
 * Update to 2020 schedule (currently 2019 one)
 * Update the maps and directories based on this schedule
@@ -25,5 +34,5 @@ Need to Finish
 * Search functionality in the map activities
 * Test on other emulators/physical phones to ensure layouts are ok
 * Reorganize food, entertainment, other (e.g. are churches/ATMs entertainment or other? are the fields entertainmet or other?)
-* Add comments and citations for images and on code
+* Add comments and citations for images and on code (authors, crest designer, fest website)
 * Work on directory a bit more (maybe add times and locations for things?)
