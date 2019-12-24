@@ -1,3 +1,8 @@
+/**
+ * Created by Elizabeth on 4/20/2017.
+ * Updated by Elizabeth on 12/23/2019.
+ */
+
 package com.example.wehrdscience;
 
 import androidx.appcompat.app.AppCompatActivity;
