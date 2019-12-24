@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.wehrdscience">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -15,8 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BiergartenActivity"></activity>
-        <activity android:name=".StageScheduleActivity" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -29,6 +29,22 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity
+            android:name=".OtherMapActivity"
+            android:label="@string/title_activity_other_map"></activity>
+        <activity
+            android:name=".EntertainmentMapActivity"
+            android:label="@string/title_activity_entertainment_map" />
+        <activity
+            android:name=".FoodMapActivity"
+            android:label="@string/title_activity_food_map" />
+        <activity android:name=".OtherDirectoryActivity" />
+        <activity android:name=".EntertainmentDirectoryActivity" />
+        <activity android:name=".FoodDirectoryActivity" />
+        <activity android:name=".RockyCouleeBrewingActivity" />
+        <activity android:name=".OutdoorStageActivity" />
+        <activity android:name=".BiergartenActivity" />
+        <activity android:name=".StageScheduleActivity" />
         <activity
             android:name=".MapActivity"
             android:label="@string/title_activity_map" />

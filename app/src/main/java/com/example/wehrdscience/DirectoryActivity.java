@@ -6,12 +6,10 @@
 package com.example.wehrdscience;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class DirectoryActivity extends AppCompatActivity {
 
@@ -25,20 +23,14 @@ public class DirectoryActivity extends AppCompatActivity {
         String button_text;
         button_text = ((Button) view).getText().toString();
         if (button_text.equals("Food")) {
-            Toast toast = Toast.makeText(DirectoryActivity.this, "TODO: Create a food activity", Toast.LENGTH_LONG);
-            toast.show();
-            //Intent intent = new Intent(DirectoryActivity.this, FoodDirectoryActivity.class);
-            //startActivity(intent);
+            Intent intent = new Intent(DirectoryActivity.this, FoodDirectoryActivity.class);
+            startActivity(intent);
         } else if (button_text.equals("Entertainment")) {
-            Toast toast = Toast.makeText(DirectoryActivity.this, "TODO: Create an entertainment activity", Toast.LENGTH_LONG);
-            toast.show();
-            //Intent intent = new Intent(DirectoryActivity.this, EntertainmentDirectoryActivity.class);
-            //startActivity(intent);
+            Intent intent = new Intent(DirectoryActivity.this, EntertainmentDirectoryActivity.class);
+            startActivity(intent);
         } else if (button_text.equals("Other")) {
-            Toast toast = Toast.makeText(DirectoryActivity.this, "TODO: Create an other activity", Toast.LENGTH_LONG);
-            toast.show();
-            //Intent intent = new Intent(DirectoryActivity.this, OtherDirectoryActivity.class);
-            //startActivity(intent);
+            Intent intent = new Intent(DirectoryActivity.this, OtherDirectoryActivity.class);
+            startActivity(intent);
         }
     }
 

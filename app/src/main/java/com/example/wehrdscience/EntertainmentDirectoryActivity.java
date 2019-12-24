@@ -6,19 +6,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ExecutiveLogInActivity extends AppCompatActivity {
+public class EntertainmentDirectoryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_executive_log_in);
+        setContentView(R.layout.activity_entertainment_directory);
+    }
+
+    public void buttonAction(View view) {
+        Intent intent = new Intent(EntertainmentDirectoryActivity.this, EntertainmentMapActivity.class);
+        startActivity(intent);
     }
 
     public void goBackHome(View view) {
         String button_text;
         button_text = ((Button) view).getText().toString();
         if (button_text.equals("Home")) {
-            Intent homeIntent = new Intent(ExecutiveLogInActivity.this, MainActivity.class);
+            Intent homeIntent = new Intent(EntertainmentDirectoryActivity.this, MainActivity.class);
             startActivity(homeIntent);
         }
     }

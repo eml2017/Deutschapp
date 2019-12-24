@@ -3,17 +3,14 @@ package com.example.wehrdscience;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,7 +41,6 @@ public class BiergartenActivity extends AppCompatActivity {
         biergartenList.add(new Event("Oom Pa's and Ma's", "Saturday", "8:00-9:00 PM"));
         biergartenList.add(new Event("Staff Infection", "Saturday", "9:15-10:45 PM"));
         biergartenList.add(new Event("Rhythmic Collective", "Saturday", "11:00 PM-1:00 AM"));
-
         biergartenList.add(new Event("Cassandra Wheeler", "Sunday", "12:15-1:15 PM"));
         biergartenList.add(new Event("Oom Pa’s and Ma’s", "Sunday", "1:30-2:30 PM"));
         biergartenList.add(new Event("Santos and Scinto", "Sunday", "2:45-4:15 PM"));

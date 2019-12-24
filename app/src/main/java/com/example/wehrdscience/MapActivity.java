@@ -1,7 +1,6 @@
 package com.example.wehrdscience;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.location.Address;
@@ -11,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.maps.CameraUpdate;
@@ -22,7 +20,6 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -453,8 +450,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     gotoLocation(47.333580, -118.690289, event, "entertainment");
                 }  else if (event.equals("Rocky Coulee Brewing")) {
                     gotoLocation(47.335962, -118.689212, event, "entertainment");
-                } else {
-                    Toast.makeText(this, "not done", Toast.LENGTH_LONG).show();
                 }
             }
         }
