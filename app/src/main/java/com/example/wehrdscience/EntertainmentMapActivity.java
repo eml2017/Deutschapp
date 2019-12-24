@@ -40,7 +40,7 @@ public class EntertainmentMapActivity extends AppCompatActivity implements OnMap
         super.onCreate(savedInstanceState);
 
         if (googleServicesAvailable()) {
-            setContentView(R.layout.activity_map);
+            setContentView(R.layout.activity_entertainment_map);
             initMap();
 
         } else {

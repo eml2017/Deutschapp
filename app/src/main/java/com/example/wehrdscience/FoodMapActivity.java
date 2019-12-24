@@ -40,7 +40,7 @@ public class FoodMapActivity extends AppCompatActivity implements OnMapReadyCall
         super.onCreate(savedInstanceState);
 
         if (googleServicesAvailable()) {
-            setContentView(R.layout.activity_map);
+            setContentView(R.layout.activity_food_map);
             initMap();
 
         } else {

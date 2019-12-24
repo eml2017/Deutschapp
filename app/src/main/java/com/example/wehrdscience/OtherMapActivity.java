@@ -40,7 +40,7 @@ public class OtherMapActivity extends AppCompatActivity implements OnMapReadyCal
         super.onCreate(savedInstanceState);
 
         if (googleServicesAvailable()) {
-            setContentView(R.layout.activity_map);
+            setContentView(R.layout.activity_other_map);
             initMap();
 
         } else {
